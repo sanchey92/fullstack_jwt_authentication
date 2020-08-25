@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 
 import mainPage from "./main/pages/mainPage/mainPage";
-import authenticationPage from "./users/pages/authenticationPage/authenticationPage";
+import AuthenticationPage from "./users/pages/authenticationPage/authenticationPage";
 import MainNavigation from "./shared/components/navigation/mainNavigation/MainNavigation";
 
 const App: FC = () => {
@@ -13,7 +13,7 @@ const App: FC = () => {
       <main>
         <Switch>
           <Route path='/' component={mainPage} exact/>
-          <Route path='/auth' component={authenticationPage} exact/>
+          <Route path='/auth' component={AuthenticationPage} exact/>
         </Switch>
       </main>
     </BrowserRouter>

@@ -15,7 +15,6 @@ const MainNavigation: FC = () => {
   const openHandler = () => setIsOpen(true);
   const closeHandler = () => setIsOpen(false)
 
-
   return (
     <>
       {isOpen && <Backdrop onClick={closeHandler}/>}
