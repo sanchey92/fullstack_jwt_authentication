@@ -1,0 +1,29 @@
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+
+}
+
+.form-control input {
+  height: 35px;
+  border: none;
+  outline: none;
+  padding-left: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.form-control label {
+  font-weight: bold;
+}
+
+.error span {
+  font-size: 12px;
+  color: red;
+  padding: 0;
+  margin: 0;
+}

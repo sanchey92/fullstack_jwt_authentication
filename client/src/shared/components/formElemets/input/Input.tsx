@@ -12,7 +12,7 @@ const Input: FC<inputType> = ({label, ...props}) => {
   return (
     <div className='form-control'>
       <label htmlFor={props.id || props.name}>{label}</label>
-      <input className='text-input' {...field} {...props}/>
+      <input className='text-input'{...field}  {...props}/>
       {
         meta.touched && meta.error
         ? (

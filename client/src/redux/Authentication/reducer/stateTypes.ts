@@ -4,4 +4,5 @@ export type AuthState = {
   password: string | null,
   token: string | null,
   isLoading: boolean,
+  message: string | null
 }
