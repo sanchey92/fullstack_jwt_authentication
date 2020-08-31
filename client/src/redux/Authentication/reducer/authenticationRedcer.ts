@@ -6,10 +6,10 @@ import ActionTypesEnum from "../actions/enum";
 const initialState: AuthState = {
   name: null,
   email: null,
-  password: null,
   token: null,
   isLoading: false,
-  message: null
+  message: null,
+  isMessage: false
 };
 
 const authReducer: Reducer<AuthState, AuthActions> =
@@ -27,13 +27,49 @@ const authReducer: Reducer<AuthState, AuthActions> =
         return {
           ...state,
           isLoading: actions.isLoading,
-          message: actions.data.message
+          message: actions.data.message,
+          isMessage: actions.isMessage
         };
 
       case ActionTypesEnum.POST_SIGNUP_FAILURE:
         return {
           ...state,
           isLoading: actions.isLoading
+        }
+
+      case ActionTypesEnum.CLOSE_MESSAGE:
+        return {
+          ...state,
+          isMessage: actions.isMessage
+        }
+
+      case ActionTypesEnum.POST_LOGIN:
+        return {
+          ...state,
+          isLoading: actions.isLoading
+        }
+
+      case ActionTypesEnum.POS_LOGIN_SUCCESS:
+        return {
+          ...state,
+          isLoading: actions.isLoading,
+          isMessage: actions.isMessage,
+          email: actions.data.email,
+          token: actions.data.token,
+          message: actions.data.message
+        }
+
+      case ActionTypesEnum.POST_LOGIN_FAILURE:
+        return {
+          ...state,
+          isLoading: actions.isLoading
+        }
+
+      case ActionTypesEnum.POST_LOGOUT:
+        return {
+          ...state,
+          email: actions.email,
+          token: actions.token
         }
 
       default:

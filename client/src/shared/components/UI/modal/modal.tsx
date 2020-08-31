@@ -11,7 +11,7 @@ export type modalType = {
   header: string,
   footer: ReactNode,
   footerClass?: string,
-  onSubmit: () => void,
+  onSubmit?: () => void,
   onCancel: () => void,
   style?: CSSProperties,
   headerClass?: string,

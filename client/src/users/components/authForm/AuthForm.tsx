@@ -1,15 +1,12 @@
 import React, {FC} from "react";
 import {Form, Formik, FormikValues} from "formik";
 import * as Yup from "yup";
-import {useDispatch, useSelector} from "react-redux";
+import {useDispatch} from "react-redux";
 import {postSignup} from "../../../redux/Authentication/actions/actionCreators";
-import {StoreInterface} from "../../../redux/StoreInterface";
-
 import Input from "../../../shared/components/formElemets/input/Input";
 
 const AuthForm: FC = () => {
 
-  const authState = useSelector((state: StoreInterface) => state.authState);
   const dispatch = useDispatch();
 
   const initialSignup = {name: '', email: '', password: ''};
